@@ -1,6 +1,7 @@
 import requests
 import json
-from requests.api import head
+from pytest import mark
+
 from data import (
     usernames,
     INPUT_LIST,
@@ -13,6 +14,7 @@ from data import (
 )
 
 
+@mark.create
 def test_create_with_list():
     response = requests.post(
         "https://petstore.swagger.io/v2/user/createWithList",
@@ -23,6 +25,7 @@ def test_create_with_list():
     assert response.json()["message"] == "ok"
 
 
+@mark.read
 def test_get_user(usernames):
     response = requests.get(
         f"https://petstore.swagger.io/v2/user/{usernames}",
@@ -32,6 +35,7 @@ def test_get_user(usernames):
     assert response.json()["username"] == usernames
 
 
+@mark.update
 def test_update_user():
     requests.post(
         "https://petstore.swagger.io/v2/user",
@@ -55,6 +59,7 @@ def test_update_user():
     assert new != old
 
 
+@mark.delete
 def test_delete_user(usernames):
     requests.post(
         "https://petstore.swagger.io/v2/user",
@@ -73,6 +78,7 @@ def test_delete_user(usernames):
     assert response1.status_code == 404
 
 
+@mark.login
 def test_user_login():
     response = requests.get(
         f"https://petstore.swagger.io/v2/user/login",
@@ -82,6 +88,7 @@ def test_user_login():
     assert response.status_code == 200
 
 
+@mark.logout
 def test_user_logout():
     response = requests.get(
         f"https://petstore.swagger.io/v2/user/logout",
@@ -90,6 +97,7 @@ def test_user_logout():
     assert response.status_code == 200
 
 
+@mark.create
 def test_create_with_array():
     response = requests.post(
         "https://petstore.swagger.io/v2/user/createWithArray",
@@ -103,6 +111,7 @@ def test_create_with_array():
     assert response.status_code == 200
 
 
+@mark.create
 def test_create_user():
     response = requests.post(
         "https://petstore.swagger.io/v2/user",

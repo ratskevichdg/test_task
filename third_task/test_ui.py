@@ -29,15 +29,15 @@ class MetricConversionsOrgTest(unittest.TestCase):
         driver.find_element_by_id("queryFrom").send_keys("Celsius")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_id("queryTo").send_keys("Fahrenheit")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_class_name("argument").send_keys("42")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_link_text("Convert").click()
         self.assertIn("Celsius to Fahrenheit conversion | °C to °F", driver.title)
 
@@ -101,17 +101,17 @@ class MetricConversionsOrgTest(unittest.TestCase):
         driver.find_element_by_id("queryFrom").send_keys("Celsius")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_id("queryTo").send_keys("Fahrenheit")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_xpath("//*[@id='results']/ol/li[1]/div/input").send_keys(
             "42"
         )
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_xpath("//*[@id='results']/ol/li[1]/div/a[2]").click()
         self.assertIn("Celsius to Fahrenheit conversion | °C to °F", driver.title)
 
@@ -129,15 +129,15 @@ class MetricConversionsOrgTest(unittest.TestCase):
         driver.find_element_by_id("queryFrom").send_keys("Meters")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_id("queryTo").send_keys("Feet")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_class_name("argument").send_keys("42")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         # page image before entering data
         blank_page_picture = driver.page_source
         driver.find_element_by_link_text("Convert").click()
@@ -197,17 +197,17 @@ class MetricConversionsOrgTest(unittest.TestCase):
         driver.find_element_by_id("queryFrom").send_keys("Meters")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_id("queryTo").send_keys("Feet")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_xpath("//*[@id='results']/ol/li[1]/div/input").send_keys(
             "42"
         )
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_xpath("//*[@id='results']/ol/li[1]/div/a[2]").click()
         self.assertIn("Meters to Feet - m to ft conversion", driver.title)
 
@@ -228,15 +228,15 @@ class MetricConversionsOrgTest(unittest.TestCase):
         driver.find_element_by_id("queryFrom").send_keys("Ounces")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_id("queryTo").send_keys("Grams")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_class_name("argument").send_keys("42")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         # page image before entering data
         blank_page_picture = driver.page_source
         driver.find_element_by_link_text("Convert").click()
@@ -302,17 +302,17 @@ class MetricConversionsOrgTest(unittest.TestCase):
         driver.find_element_by_id("queryFrom").send_keys("Ounces")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_id("queryTo").send_keys("Grams")
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_xpath("//*[@id='results']/ol/li[1]/div/input").send_keys(
             "42"
         )
         # Use sleep to fill the form correctly
         # otherwise the two fields will not fill in together
-        sleep(0.5)
+        sleep(1)
         driver.find_element_by_xpath("//*[@id='results']/ol/li[1]/div/a[2]").click()
         self.assertIn("Ounces to Grams - oz to g conversion", driver.title)
 
