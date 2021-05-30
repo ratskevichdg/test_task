@@ -10,4 +10,6 @@ It contains a tests for the following features:
 - Test for converting meters to feet;
 - Test for converting ounces to grams;
 
+In "About Me Ratskevich Dzmitry.pdf" you can find some information about me and why I choose python as my first programming language
+
 If you correctly install all libraries from requirements.txt just type "pytest" in your console and it will work.
